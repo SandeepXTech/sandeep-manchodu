@@ -4,14 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Meet Sandeep Manchodu — a B.Tech student, gamer, music lover and curious explorer of space, nature and life.">
+  <meta name="description" content="Get to know Sandeep Manchodu beyond the introduction — gaming, music, movies, curious thoughts and big dreams.">
   <meta name="author" content="Sandeep Manchodu">
   <meta name="theme-color" content="#f8f8f5">
-  <meta property="og:title" content="Sandeep Manchodu | Manchodu">
-  <meta property="og:description" content="Big dreams, good music, curious thoughts and absolutely no emotional attachment to a 9–5 life.">
-  <meta property="og:type" content="profile">
-  <title>Sandeep Manchodu | Manchodu</title>
-  <link rel="canonical" href="https://sandeepxptech.github.io/sandeep-manchodu/">
+  <title>Get to Know Me | Sandeep Manchodu</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
@@ -26,7 +23,6 @@
     }
 
     * { box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -39,17 +35,17 @@
     a { color: inherit; }
 
     .wrap {
-      width: min(1040px, calc(100% - 40px));
+      width: min(960px, calc(100% - 40px));
       margin: auto;
     }
 
     header {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 26px 0;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 25px 0;
       border-bottom: 1px solid var(--line);
-      gap: 20px;
     }
 
     .brand {
@@ -58,26 +54,11 @@
       text-decoration: none;
     }
 
-    .nav {
-      display: flex;
-      gap: 22px;
-      font-size: 14px;
-      color: var(--muted);
-      flex-wrap: wrap;
-    }
-
-    .nav a { text-decoration: none; }
-
-    .nav a:hover, .back-link:hover {
+    .back {
       color: var(--green);
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: 1.25fr .75fr;
-      gap: 48px;
-      align-items: center;
-      padding: 90px 0 78px;
+      font-size: 14px;
+      text-decoration: none;
+      font-weight: 600;
     }
 
     .eyebrow {
@@ -88,450 +69,349 @@
       font-weight: 700;
     }
 
+    .hero {
+      padding: 78px 0 58px;
+      max-width: 780px;
+    }
+
+    h1, h2 {
+      font-family: "Playfair Display", Georgia, serif;
+    }
+
     h1 {
-      font: 700 clamp(45px, 7vw, 78px)/1.04 "Playfair Display", serif;
-      margin: 18px 0;
+      font-size: clamp(45px, 8vw, 76px);
+      line-height: 1.06;
       letter-spacing: -.04em;
+      margin: 18px 0;
     }
 
     h1 span { color: var(--green); }
 
-    .lead {
+    h2 {
+      font-size: 30px;
+      line-height: 1.25;
+      margin: 12px 0;
+    }
+
+    p {
       color: var(--muted);
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .intro {
       font-size: 18px;
-      line-height: 1.8;
-      max-width: 590px;
-    }
-
-    .actions {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 28px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 13px 19px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 600;
-      border: 1px solid var(--ink);
-      transition: transform .2s ease;
-    }
-
-    .btn:hover { transform: translateY(-2px); }
-
-    .primary {
-      background: var(--ink);
-      color: white;
-    }
-
-    .secondary { background: transparent; }
-
-    .portrait {
-      min-height: 360px;
-      border-radius: 28px;
-      background: linear-gradient(145deg, #e5e9df, #cbd6c8);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      overflow: hidden;
-      color: #526151;
-    }
-
-    .portrait img {
-      width: 100%;
-      height: 360px;
-      object-fit: cover;
-      display: block;
+      max-width: 650px;
     }
 
     section {
-      padding: 58px 0;
       border-top: 1px solid var(--line);
+      padding: 48px 0;
       scroll-margin-top: 20px;
-    }
-
-    h2 {
-      font: 700 34px "Playfair Display", serif;
-      margin: 0 0 16px;
-    }
-
-    .about {
-      max-width: 760px;
-      color: var(--muted);
-      line-height: 1.9;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 16px;
-      margin-top: 28px;
+      margin-top: 24px;
     }
 
-    .tile {
+    .card {
       background: white;
       border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 23px;
-      min-height: 155px;
+      border-radius: 19px;
+      padding: 25px;
     }
 
-    .tile b {
-      display: block;
+    .card p { margin-bottom: 0; }
+
+    .emoji {
+      font-size: 25px;
       margin-bottom: 10px;
     }
 
-    .tile p {
-      color: var(--muted);
-      line-height: 1.8;
-      font-size: 14px;
-      margin: 0;
-    }
+    .wide { grid-column: 1 / -1; }
 
-    .quote {
+    .highlight {
       background: #edf1e9;
       border-radius: 22px;
-      padding: 34px;
-      font: 600 25px/1.5 "Playfair Display", serif;
+      padding: 30px;
+      margin-top: 22px;
     }
 
-    .tag {
+    .highlight h2 { margin-top: 10px; }
+
+    .quote {
+      font: 600 clamp(23px, 4vw, 32px)/1.5 "Playfair Display", Georgia, serif;
+      color: var(--ink);
+    }
+
+    .pill {
       display: inline-block;
-      padding: 7px 12px;
-      margin: 5px 5px 0 0;
-      border-radius: 999px;
       background: #edf1e9;
       color: var(--green);
-      font-size: 13px;
+      padding: 7px 12px;
+      border-radius: 30px;
+      font-size: 12px;
+      margin: 5px 4px 0 0;
     }
 
-    .language-list {
-      color: var(--muted);
-      line-height: 1.9;
+    .button {
+      display: inline-block;
+      background: var(--ink);
+      color: white;
+      padding: 13px 19px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      margin-top: 10px;
     }
 
     footer {
       border-top: 1px solid var(--line);
-      padding: 28px 0 42px;
-      color: var(--muted);
-      font-size: 13px;
+      padding: 26px 0 38px;
       display: flex;
       justify-content: space-between;
-      gap: 16px;
+      gap: 12px;
       flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 13px;
     }
 
-    @media (max-width: 720px) {
-      .hero {
-        grid-template-columns: 1fr;
-        padding: 58px 0;
-        gap: 30px;
-      }
-
-      .portrait { min-height: 250px; }
-      .portrait img { height: 400px; }
+    @media (max-width: 650px) {
+      .hero { padding: 52px 0 40px; }
       .grid { grid-template-columns: 1fr; }
-      .nav { gap: 12px; font-size: 12px; }
-      h2 { font-size: 30px; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      .btn { transition: none; }
+      .wide { grid-column: auto; }
+      .card { padding: 22px; }
     }
   </style>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfilePage",
-    "name": "Sandeep Manchodu — Personal Profile",
-    "url": "https://sandeepxptech.github.io/sandeep-manchodu/",
-    "mainEntity": {
-      "@type": "Person",
-      "name": "Sandeep Manchodu",
-      "alternateName": ["Sandeep", "Manchodu"],
-      "description": "A B.Tech student interested in gaming, music, space, nature, animals and learning new things.",
-      "sameAs": ["https://www.instagram.com/alwayz_sandeep/"]
-    }
-  }
-  </script>
 </head>
 
 <body>
   <div class="wrap">
+
     <header>
       <a class="brand" href="index.html">
         SANDEEP<span style="color:#496b55">.</span>
       </a>
-
-      <nav class="nav" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#interests">Interests</a>
-        <a href="#dreams">Dreams</a>
-        <a href="#connect">Connect</a>
-      </nav>
+      <a class="back" href="index.html">← Back to home</a>
     </header>
 
     <main>
       <div class="hero">
-        <div>
-          <div class="eyebrow">A personal space · A real personality</div>
-
-          <h1>Hello, I'm<br><span>Sandeep Manchodu.</span></h1>
-
-          <p class="lead">
-            B.Tech life, gaming nights, songs on repeat and random
-            questions about the universe. I’m trying to build a life
-            I genuinely enjoy — preferably without a compulsory
-            Monday-to-Friday relationship with a desk. 😭
-          </p>
-
-          <div class="actions">
-            <a class="btn primary"
-               href="https://www.instagram.com/alwayz_sandeep/"
-               target="_blank"
-               rel="noopener noreferrer">
-              Follow @alwayz_sandeep ↗
-            </a>
-
-            <a class="btn secondary" href="about.html">
-              Get to know me →
-            </a>
-          </div>
-        </div>
-
-        <div class="portrait">
-          <img src="sandeep-manchodu.jpeg"
-               alt="Sandeep Manchodu"
-               width="600"
-               height="700">
-        </div>
+        <div class="eyebrow">The person behind the profile</div>
+        <h1>Okay, but who am I <span>really?</span> 😅</h1>
+        <p class="intro">
+          Welcome to the less formal side of my internet existence.
+          Here are some things I enjoy, a few things I dream about,
+          and evidence that my brain has too many open tabs.
+        </p>
       </div>
 
-      <section id="about">
-        <div class="eyebrow">A little about me</div>
-        <h2>Still figuring it out. That's the fun part.</h2>
-
-        <p class="about">
-          I'm Sandeep Manchodu. A B.Tech guy navigating college,
-          life and the occasional existential crisis that arrives
-          without an appointment. I enjoy learning, discovering
-          new things and finding reasons to laugh along the way.
-          I don't have everything figured out — but pretending I do
-          sounds exhausting. 😂
-        </p>
-      </section>
-
-      <section id="interests">
-        <div class="eyebrow">Things that keep me entertained</div>
-        <h2>My world, in a few words.</h2>
-
-        <div class="grid">
-          <div class="tile">
-            <b>🎮 Gaming mode</b>
-            <p>
-              Just one more match. Famous last words.
-              Sometimes I win; sometimes the game teaches me patience
-              in the most disrespectful way possible.
-            </p>
-          </div>
-
-          <div class="tile">
-            <b>🌌 Curious about everything</b>
-            <p>
-              Space, nature and animals fascinate me.
-              The universe is unbelievably huge, animals are wonderfully
-              weird, and somehow I still have more questions than answers.
-            </p>
-          </div>
-
-          <div class="tile">
-            <b>🎧 Songs on repeat</b>
-            <p>
-              A good song can fix the mood, improve the walk and
-              turn a completely ordinary moment into a movie scene.
-              My playlist deserves partial credit for my happiness.
-            </p>
-          </div>
-        </div>
-      </section>
-
       <section>
-        <div class="eyebrow">The B.Tech chronicles</div>
-        <h2>Degree loading. Life loading. 😂</h2>
-
-        <p class="about">
-          B.Tech is a mix of deadlines, exams, unexpected lessons
-          and wondering how the semester passed so quickly.
+        <div class="eyebrow">01 · College chronicles</div>
+        <h2>B.Tech: a character development program.</h2>
+        <p>
+          B.Tech has been a journey of classes, exams, deadlines,
+          unexpected lessons and wondering where the semester went.
           Somewhere between assignments and figuring things out,
-          I realised college is about more than marks — it's also
-          about memories, friendships, mistakes and learning to
-          handle life one plot twist at a time.
+          college became more than a degree — it's the memories,
+          friendships and experiences along the way.
         </p>
-
-        <p class="about">
-          Still learning. Still growing. And occasionally checking
-          how many days are left until the next holiday.
+        <p>
+          Still learning. Still growing. Degree loading...
+          life updates pending. 😂
         </p>
       </section>
 
-      <section id="dreams">
-        <div class="eyebrow">The bigger picture</div>
-        <h2>Freedom is the real flex.</h2>
-
-        <p class="about">
-          My dream? To become financially free enough that buying
-          something I like doesn't require a calculator, three budget
-          revisions and a meeting with my inner finance minister.
-        </p>
-
-        <p class="about">
-          I don't dream of avoiding hard work. I dream of having
-          more control over it — building something meaningful,
-          exploring opportunities and having the freedom to enjoy
-          the life I'm working for.
-        </p>
-
-        <p class="about">
-          And the classic 9–5 routine? I'd rather create my own path
-          if I can. Big dream, yes. Impossible? Let's see. 😎
-        </p>
+      <section>
+        <div class="eyebrow">02 · Things I genuinely enjoy</div>
+        <h2>My kind of entertainment.</h2>
 
         <div class="grid">
-          <div class="tile">
-            <b>💸 Financial freedom</b>
+          <article class="card">
+            <div class="emoji">🎮</div>
+            <h2>Gaming</h2>
             <p>
-              One day, buy something I want without conducting
-              a full investigation into my bank balance.
+              Just one more match. The most optimistic lie
+              ever told by a gamer. Sometimes it's a win,
+              sometimes it's a lesson in anger management.
             </p>
-          </div>
+          </article>
 
-          <div class="tile">
-            <b>🧠 Never stop learning</b>
+          <article class="card">
+            <div class="emoji">🌌</div>
+            <h2>Space, nature & animals</h2>
             <p>
-              Keep discovering new ideas, understanding the world
-              and getting better at things that matter to me.
+              I love learning about the universe, nature
+              and animals. The world is fascinating enough
+              already, and then you discover something new
+              and suddenly have ten more questions.
             </p>
-          </div>
+          </article>
 
-          <div class="tile">
-            <b>🌍 A life of my own</b>
+          <article class="card wide">
+            <div class="emoji">🎧</div>
+            <h2>Songs that change the mood</h2>
             <p>
-              Make room for meaningful work, good people,
-              new experiences and a little adventure.
+              Sometimes all it takes is the right song.
+              Suddenly the walk feels cinematic, the day feels
+              lighter, and I'm starring in a movie that nobody
+              else knows is happening.
             </p>
-          </div>
+            <span class="pill">Headphones on</span>
+            <span class="pill">World temporarily muted</span>
+            <span class="pill">Repeat favourite song</span>
+          </article>
         </div>
       </section>
 
       <section>
-        <div class="eyebrow">My kind of cinema</div>
-        <h2>Make it feel like a movie.</h2>
+        <div class="eyebrow">03 · The dream</div>
+        <h2>Financial freedom, please. 😌</h2>
+        <div class="highlight">
+          <p class="quote">
+            I want to reach a point where buying something
+            I like doesn't require a budget meeting with myself.
+          </p>
+          <p>
+            No calculator. No checking my bank balance seventeen
+            times. No internal committee asking whether I really
+            need it. Just making sensible choices without stressing
+            over every little purchase.
+          </p>
+        </div>
 
-        <p class="about">
-          Feel-good movies, adventures, historical films and
-          larger-than-life characters — that's my kind of watchlist.
-          Give me a story that inspires me, takes me somewhere new,
-          or makes me forget to check my phone for two hours.
+        <p>
+          I'd also love to build a life beyond the standard 9–5
+          routine. Not because I want to avoid hard work, but
+          because I want more freedom over what I do, what I build,
+          and how I spend my time.
+        </p>
+        <p>
+          The goal is to work towards a life I enjoy — with room
+          for new experiences, meaningful work, and the occasional
+          completely unnecessary purchase. 😂
+        </p>
+      </section>
+
+      <section>
+        <div class="eyebrow">04 · My movie taste</div>
+        <h2>Make it feel larger than life.</h2>
+        <p>
+          Give me a feel-good movie when I want to smile,
+          an adventure when I want to escape, a historical film
+          when I want to explore another era, or a larger-than-life
+          character who makes an ordinary story feel legendary.
         </p>
 
         <div>
-          <span class="tag">Feel-good films</span>
-          <span class="tag">Adventure</span>
-          <span class="tag">History</span>
-          <span class="tag">Epic characters</span>
+          <span class="pill">Feel-good movies</span>
+          <span class="pill">Adventure</span>
+          <span class="pill">Historical films</span>
+          <span class="pill">Epic characters</span>
         </div>
       </section>
 
       <section>
-        <div class="eyebrow">A small disclaimer</div>
-        <h2>Things I refuse to overthink.</h2>
+        <div class="eyebrow">05 · Random facts department</div>
+        <h2>My brain has its own agenda.</h2>
 
         <div class="grid">
-          <div class="tile">
-            <b>💀 Hairfall drama?</b>
+          <article class="card">
+            <div class="emoji">🧠</div>
+            <h2>Curiosity overload</h2>
             <p>
-              Not every strand needs a farewell ceremony.
-              I'll take reasonable care of myself, stay sensible
-              and refuse to let a few hairs write my autobiography.
+              I can start by wondering about space and end up
+              learning about an animal I've never heard of.
+              The original question may never get answered.
             </p>
-          </div>
+          </article>
 
-          <div class="tile">
-            <b>📱 Opened my phone for what?</b>
+          <article class="card">
+            <div class="emoji">📱</div>
+            <h2>Phone mission: forgotten</h2>
             <p>
-              Walked into an app with a mission.
-              Forgot the mission.
-              Left with three new facts about space.
+              Open my phone for one specific reason.
+              Forget the reason. Somehow end up watching videos.
+              Mission status: classified.
             </p>
-          </div>
+          </article>
 
-          <div class="tile">
-            <b>🤔 One question, 27 questions</b>
+          <article class="card">
+            <div class="emoji">🎬</div>
+            <h2>Main character playlist</h2>
             <p>
-              I like learning new things. Unfortunately,
-              every answer seems to unlock a bonus level
-              of questions.
+              Add the right song and an ordinary walk becomes
+              a dramatic cinematic sequence. No production
+              budget required.
             </p>
-          </div>
+          </article>
+
+          <article class="card">
+            <div class="emoji">💀</div>
+            <h2>Hairfall? We move.</h2>
+            <p>
+              I'm not letting a few missing strands write
+              my autobiography. I'll take sensible care of
+              myself, but I'm not holding a farewell ceremony
+              for every hair. 😂
+            </p>
+          </article>
+
+          <article class="card wide">
+            <div class="emoji">🌱</div>
+            <h2>Still a work in progress</h2>
+            <p>
+              I don't have every answer, a five-year plan for
+              every situation, or life completely figured out.
+              I'm learning as I go. Sometimes confidently,
+              sometimes by trial and error — but always moving.
+            </p>
+          </article>
         </div>
-      </section>
-
-      <section id="meaning">
-        <div class="eyebrow">The meaning behind the name</div>
-        <h2>Manchodu — a name with meaning.</h2>
-
-        <p class="about">
-          In Telugu, related expressions include
-          <strong>మంచివాడు (manchivāḍu)</strong>, meaning
-          “a good man,” and <strong>మంచి మనిషి (manchi manishi)</strong>,
-          meaning “a good person.” The exact sense depends on context.
-          For my personal brand, Manchodu represents kindness,
-          honesty, respect and good character.
-        </p>
       </section>
 
       <section>
-        <div class="quote">
-          “Big dreams, good music, a curious mind —
-          and enough humour to survive the plot twists.”
+        <div class="eyebrow">06 · My unofficial philosophy</div>
+        <div class="highlight">
+          <p class="quote">
+            Take life seriously when it matters.
+            Don't take every little thing personally.
+            And never underestimate the power of a good song.
+          </p>
         </div>
       </section>
 
-      <section id="connect">
-        <div class="eyebrow">Let's connect</div>
-        <h2>Say hello.</h2>
-
-        <p class="about">
-          If you enjoy a little humour, curious conversations
-          and everyday moments, come say hi on Instagram.
+      <section>
+        <div class="eyebrow">You've made it to the end</div>
+        <h2>That's enough about my chaos. 😄</h2>
+        <p>
+          Thanks for taking a little time to explore this page.
+          I'm still learning, still dreaming, and still discovering
+          things that make life interesting.
+        </p>
+        <p>
+          If something here made you smile, we're already off
+          to a good start.
         </p>
 
-        <div class="actions">
-          <a class="btn primary"
-             href="https://www.instagram.com/alwayz_sandeep/"
-             target="_blank"
-             rel="noopener noreferrer">
-            📸 @alwayz_sandeep ↗
-          </a>
-
-          <a class="btn secondary" href="about.html">
-            More about me →
-          </a>
-        </div>
+        <a class="button"
+           href="https://www.instagram.com/alwayz_sandeep/"
+           target="_blank"
+           rel="noopener noreferrer">
+          Say hello on Instagram ↗
+        </a>
       </section>
     </main>
 
     <footer>
-      <span>© <span id="year">2026</span> Sandeep Manchodu</span>
-      <span>Personal website · Made to be real, not perfect.</span>
+      <span>© 2026 Sandeep Manchodu</span>
+      <a href="index.html">Back to homepage ↑</a>
     </footer>
+
   </div>
 </body>
 </html>
