@@ -13,7 +13,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-  <style>
+
+<style>
     :root {
       --ink: #20231f;
       --muted: #6e746d;
@@ -169,6 +170,45 @@
       margin-top: 10px;
     }
 
+    /* Personal photo gallery */
+    .photo-gallery {
+      margin: 50px 0;
+      text-align: center;
+    }
+
+    .photo-gallery h2 {
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+
+    .photo-gallery p {
+      color: var(--muted);
+      margin-bottom: 25px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      max-width: 750px;
+      margin: 25px auto 0;
+    }
+
+    .gallery img {
+      display: block;
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: white;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: translateY(-5px);
+    }
+
     footer {
       border-top: 1px solid var(--line);
       padding: 26px 0 38px;
@@ -185,9 +225,21 @@
       .grid { grid-template-columns: 1fr; }
       .wide { grid-column: auto; }
       .card { padding: 22px; }
+
+      .gallery {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+      }
+
+      .gallery img {
+        height: auto;
+        max-height: 450px;
+        object-fit: contain;
+      }
     }
-  </style>
+</style>
 </head>
+
 
 <body>
   <div class="wrap">
@@ -209,6 +261,15 @@
           and evidence that my brain has too many open tabs.
         </p>
       </div>
+       <section class="photo-gallery">
+        <h2>A Little More of Me 📸</h2>
+        <p>Some moments, some memories, just me being me.</p>
+
+        <div class="gallery">
+          <img src="sandeep%20.jpeg" alt="Sandeep Manchodu" loading="lazy">
+          <img src="sandeepsandy.jpeg" alt="Sandeep Manchodu" loading="lazy">
+        </div>
+      </section>
 
       <section>
         <div class="eyebrow">01 · College chronicles</div>
@@ -217,7 +278,7 @@
           B.Tech has been a journey of classes, exams, deadlines,
           unexpected lessons and wondering where the semester went.
           Somewhere between assignments and figuring things out,
-          college became more than a degree — it's the memories,
+          college became more than a degree  it's the memories,
           friendships and experiences along the way.
         </p>
         <p>
@@ -251,6 +312,25 @@
               and suddenly have ten more questions.
             </p>
           </article>
+
+<section class="photo-gallery">
+  <h2>A Little More of Me 📸</h2>
+  <p>Some moments, some memories, just me being me.</p>
+
+  <div class="gallery">
+    <img
+      src="sandeep%20.jpeg"
+      alt="Sandeep Manchodu"
+      loading="lazy"
+    />
+
+    <img
+      src="sandeepsandy.jpeg"
+      alt="Sandeep Manchodu"
+      loading="lazy"
+    />
+  </div>
+</section>
 
           <article class="card wide">
             <div class="emoji">🎧</div>
