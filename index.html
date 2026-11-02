@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Meet Sandeep — a personal brand sharing everyday moments, creativity, learning and the meaning behind Manchodu.">
+  <meta name="author" content="Sandeep">
+  <meta name="theme-color" content="#f8f8f5">
+  <meta property="og:title" content="Sandeep | Manchodu">
+  <meta property="og:description" content="A little confidence, a little kindness, and a lot of being yourself.">
+  <meta property="og:type" content="profile">
+  <title>Sandeep | Manchodu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --ink:#20231f; --muted:#6e746d; --paper:#f8f8f5; --line:#e5e7df; --green:#496b55; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:"DM Sans",sans-serif; }
+    a { color:inherit; }
+    .wrap { width:min(1040px, calc(100% - 40px)); margin:auto; }
+    header { display:flex; justify-content:space-between; align-items:center; padding:26px 0; border-bottom:1px solid var(--line); }
+    .brand { font-weight:700; letter-spacing:.04em; }
+    .nav { display:flex; gap:22px; font-size:14px; color:var(--muted); }
+    .nav a { text-decoration:none; }
+    .hero { display:grid; grid-template-columns:1.25fr .75fr; gap:48px; align-items:center; padding:90px 0 78px; }
+    .eyebrow { color:var(--green); text-transform:uppercase; letter-spacing:.18em; font-size:11px; font-weight:700; }
+    h1 { font:700 clamp(48px,8vw,82px)/1.02 "Playfair Display",serif; margin:18px 0; letter-spacing:-.04em; }
+    h1 span { color:var(--green); }
+    .lead { color:var(--muted); font-size:18px; line-height:1.8; max-width:590px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:28px; }
+    .btn { display:inline-block; padding:13px 19px; border-radius:999px; text-decoration:none; font-size:14px; font-weight:600; border:1px solid var(--ink); }
+    .primary { background:var(--ink); color:white; }
+    .secondary { background:transparent; }
+    .portrait { min-height:360px; border-radius:28px; background:linear-gradient(145deg,#e5e9df,#cbd6c8); display:flex; align-items:center; justify-content:center; text-align:center; padding:28px; color:#526151; }
+    .portrait strong { display:block; font:700 58px "Playfair Display",serif; }
+    .portrait small { display:block; margin-top:8px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; }
+    section { padding:58px 0; border-top:1px solid var(--line); }
+    h2 { font:700 34px "Playfair Display",serif; margin:0 0 16px; }
+    .about { max-width:720px; color:var(--muted); line-height:1.9; }
+    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:28px; }
+    .tile { background:white; border:1px solid var(--line); border-radius:18px; padding:23px; min-height:150px; }
+    .tile b { display:block; margin-bottom:10px; }
+    .tile p { color:var(--muted); line-height:1.7; font-size:14px; margin:0; }
+    .quote { background:#edf1e9; border-radius:22px; padding:34px; font:600 25px/1.5 "Playfair Display",serif; }
+    footer { border-top:1px solid var(--line); padding:28px 0 42px; color:var(--muted); font-size:13px; display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+    @media(max-width:720px) { .hero { grid-template-columns:1fr; padding:58px 0; gap:30px; } .portrait { min-height:230px; } .grid { grid-template-columns:1fr; } .nav { gap:12px; } }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Sandeep",
+      "alternateName": "Manchodu",
+      "description": "A personal creator sharing everyday moments, creativity, learning and positive energy."
+    }
+  }
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">SANDEEP<span style="color:#496b55">.</span></div>
+      <nav class="nav"><a href="#about">About</a><a href="#interests">Interests</a><a href="#connect">Connect</a></nav>
+    </header>
+
+    <main>
+      <div class="hero">
+        <div>
+          <div class="eyebrow">A personal space · A real personality</div>
+          <h1>Hello, I'm<br><span>Sandeep.</span></h1>
+          <p class="lead">A little confidence, a little kindness, and a lot of being yourself. Here you'll find my journey, interests, creative side and the story behind “Manchodu”.</p>
+          <div class="actions">
+            <!-- Replace the Instagram URL below with your real profile link. -->
+            <a class="btn primary" href="https://www.instagram.com/" target="_blank" rel="noopener">Find me on Instagram ↗</a>
+            <a class="btn secondary" href="#about">Get to know me</a>
+          </div>
+        </div>
+        <div class="portrait" aria-label="Photo placeholder">
+          <div><strong>S.</strong><small>Replace this box with your own photo</small></div>
+        </div>
+      </div>
+
+      <section id="about">
+        <div class="eyebrow">A little about me</div>
+        <h2>More than a name.</h2>
+        <p class="about">I'm Sandeep. I'm learning, creating and figuring things out one step at a time. I enjoy technology, personal growth, meaningful moments and sharing a positive vibe. “Manchodu” is the playful identity I want people to associate with confidence, kindness and being genuine.</p>
+      </section>
+
+      <section id="interests">
+        <div class="eyebrow">What you'll find here</div>
+        <h2>My world, in a few words.</h2>
+        <div class="grid">
+          <div class="tile"><b>Everyday moments</b><p>Photos, memories and little things worth smiling about.</p></div>
+          <div class="tile"><b>Learning & creating</b><p>My journey with technology, ideas and creative projects.</p></div>
+          <div class="tile"><b>Good energy</b><p>Confidence, kindness, humour and staying true to myself.</p></div>
+        </div>
+      </section>
+
+      <section>
+        <div class="quote">“Being a manchodu isn't about showing off. It's about confidence, character and treating people well.”</div>
+      </section>
+
+      <section id="connect">
+        <div class="eyebrow">Let's connect</div>
+        <h2>Say hello.</h2>
+        <p class="about">For now, Instagram is the best place to find me. Add your exact profile link before publishing this website.</p>
+        <div class="actions">
+          <a class="btn primary" href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram ↗</a>
+        </div>
+      </section>
+    </main>
+
+    <footer><span>© <span id="year">2026</span> Sandeep · Manchodu</span><span>Made to be real. Not perfect.</span></footer>
+  </div>
+</body>
+</html>
