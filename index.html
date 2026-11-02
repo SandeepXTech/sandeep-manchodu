@@ -1,53 +1,251 @@
+
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Meet Sandeep Manchodu — a personal brand sharing everyday moments, creativity, learning and the meaning behind Manchodu, a word associated here with kindness and good character.">
+  <meta name="description" content="Meet Sandeep Manchodu — a B.Tech student, gamer, music lover and curious explorer of space, nature and life.">
   <meta name="author" content="Sandeep Manchodu">
   <meta name="theme-color" content="#f8f8f5">
   <meta property="og:title" content="Sandeep Manchodu | Manchodu">
-  <meta property="og:description" content="A little confidence, a little kindness, and a lot of being yourself.">
+  <meta property="og:description" content="Big dreams, good music, curious thoughts and absolutely no emotional attachment to a 9–5 life.">
   <meta property="og:type" content="profile">
   <title>Sandeep Manchodu | Manchodu</title>
   <link rel="canonical" href="https://sandeepxptech.github.io/sandeep-manchodu/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
   <style>
-    :root { --ink:#20231f; --muted:#6e746d; --paper:#f8f8f5; --line:#e5e7df; --green:#496b55; }
-    * { box-sizing:border-box; }
-    body { margin:0; background:var(--paper); color:var(--ink); font-family:"DM Sans",sans-serif; }
-    a { color:inherit; }
-    .wrap { width:min(1040px, calc(100% - 40px)); margin:auto; }
-    header { display:flex; justify-content:space-between; align-items:center; padding:26px 0; border-bottom:1px solid var(--line); }
-    .brand { font-weight:700; letter-spacing:.04em; }
-    .nav { display:flex; gap:22px; font-size:14px; color:var(--muted); }
-    .nav a { text-decoration:none; }
-    .hero { display:grid; grid-template-columns:1.25fr .75fr; gap:48px; align-items:center; padding:90px 0 78px; }
-    .eyebrow { color:var(--green); text-transform:uppercase; letter-spacing:.18em; font-size:11px; font-weight:700; }
-    h1 { font:700 clamp(48px,8vw,82px)/1.02 "Playfair Display",serif; margin:18px 0; letter-spacing:-.04em; }
-    h1 span { color:var(--green); }
-    .lead { color:var(--muted); font-size:18px; line-height:1.8; max-width:590px; }
-    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:28px; }
-    .btn { display:inline-block; padding:13px 19px; border-radius:999px; text-decoration:none; font-size:14px; font-weight:600; border:1px solid var(--ink); }
-    .primary { background:var(--ink); color:white; }
-    .secondary { background:transparent; }
-    .portrait { min-height:360px; border-radius:28px; background:linear-gradient(145deg,#e5e9df,#cbd6c8); display:flex; align-items:center; justify-content:center; text-align:center; padding:28px; color:#526151; }
-    .portrait strong { display:block; font:700 58px "Playfair Display",serif; }
-    .portrait small { display:block; margin-top:8px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; }
-    section { padding:58px 0; border-top:1px solid var(--line); }
-    h2 { font:700 34px "Playfair Display",serif; margin:0 0 16px; }
-    .about { max-width:720px; color:var(--muted); line-height:1.9; }
-    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:28px; }
-    .tile { background:white; border:1px solid var(--line); border-radius:18px; padding:23px; min-height:150px; }
-    .tile b { display:block; margin-bottom:10px; }
-    .tile p { color:var(--muted); line-height:1.7; font-size:14px; margin:0; }
-    .quote { background:#edf1e9; border-radius:22px; padding:34px; font:600 25px/1.5 "Playfair Display",serif; }
-    .language-list { color:var(--muted); line-height:1.9; }
-    footer { border-top:1px solid var(--line); padding:28px 0 42px; color:var(--muted); font-size:13px; display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; }
-    @media(max-width:720px) { .hero { grid-template-columns:1fr; padding:58px 0; gap:30px; } .portrait { min-height:230px; } .grid { grid-template-columns:1fr; } .nav { gap:12px; } }
+    :root {
+      --ink: #20231f;
+      --muted: #6e746d;
+      --paper: #f8f8f5;
+      --line: #e5e7df;
+      --green: #496b55;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "DM Sans", sans-serif;
+    }
+
+    a { color: inherit; }
+
+    .wrap {
+      width: min(1040px, calc(100% - 40px));
+      margin: auto;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 26px 0;
+      border-bottom: 1px solid var(--line);
+      gap: 20px;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-decoration: none;
+    }
+
+    .nav {
+      display: flex;
+      gap: 22px;
+      font-size: 14px;
+      color: var(--muted);
+      flex-wrap: wrap;
+    }
+
+    .nav a { text-decoration: none; }
+
+    .nav a:hover, .back-link:hover {
+      color: var(--green);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 48px;
+      align-items: center;
+      padding: 90px 0 78px;
+    }
+
+    .eyebrow {
+      color: var(--green);
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    h1 {
+      font: 700 clamp(45px, 7vw, 78px)/1.04 "Playfair Display", serif;
+      margin: 18px 0;
+      letter-spacing: -.04em;
+    }
+
+    h1 span { color: var(--green); }
+
+    .lead {
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.8;
+      max-width: 590px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 19px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      border: 1px solid var(--ink);
+      transition: transform .2s ease;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .primary {
+      background: var(--ink);
+      color: white;
+    }
+
+    .secondary { background: transparent; }
+
+    .portrait {
+      min-height: 360px;
+      border-radius: 28px;
+      background: linear-gradient(145deg, #e5e9df, #cbd6c8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      color: #526151;
+    }
+
+    .portrait img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      display: block;
+    }
+
+    section {
+      padding: 58px 0;
+      border-top: 1px solid var(--line);
+      scroll-margin-top: 20px;
+    }
+
+    h2 {
+      font: 700 34px "Playfair Display", serif;
+      margin: 0 0 16px;
+    }
+
+    .about {
+      max-width: 760px;
+      color: var(--muted);
+      line-height: 1.9;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .tile {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 23px;
+      min-height: 155px;
+    }
+
+    .tile b {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .tile p {
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .quote {
+      background: #edf1e9;
+      border-radius: 22px;
+      padding: 34px;
+      font: 600 25px/1.5 "Playfair Display", serif;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 7px 12px;
+      margin: 5px 5px 0 0;
+      border-radius: 999px;
+      background: #edf1e9;
+      color: var(--green);
+      font-size: 13px;
+    }
+
+    .language-list {
+      color: var(--muted);
+      line-height: 1.9;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 28px 0 42px;
+      color: var(--muted);
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 720px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 58px 0;
+        gap: 30px;
+      }
+
+      .portrait { min-height: 250px; }
+      .portrait img { height: 400px; }
+      .grid { grid-template-columns: 1fr; }
+      .nav { gap: 12px; font-size: 12px; }
+      h2 { font-size: 30px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .btn { transition: none; }
+    }
   </style>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -58,79 +256,282 @@
       "@type": "Person",
       "name": "Sandeep Manchodu",
       "alternateName": ["Sandeep", "Manchodu"],
-      "description": "A personal creator sharing everyday moments, creativity, learning and positive energy.",
+      "description": "A B.Tech student interested in gaming, music, space, nature, animals and learning new things.",
       "sameAs": ["https://www.instagram.com/alwayz_sandeep/"]
     }
   }
   </script>
 </head>
+
 <body>
   <div class="wrap">
     <header>
-      <div class="brand">SANDEEP<span style="color:#496b55">.</span></div>
-      <nav class="nav"><a href="#about">About</a><a href="#interests">Interests</a><a href="#meaning">Meaning</a><a href="#connect">Connect</a></nav>
+      <a class="brand" href="index.html">
+        SANDEEP<span style="color:#496b55">.</span>
+      </a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#interests">Interests</a>
+        <a href="#dreams">Dreams</a>
+        <a href="#connect">Connect</a>
+      </nav>
     </header>
 
     <main>
       <div class="hero">
         <div>
           <div class="eyebrow">A personal space · A real personality</div>
+
           <h1>Hello, I'm<br><span>Sandeep Manchodu.</span></h1>
-          <p class="lead">A little confidence, a little kindness, and a lot of being yourself. Here you'll find my journey, interests, creative side and the meaning behind “Manchodu”.</p>
+
+          <p class="lead">
+            B.Tech life, gaming nights, songs on repeat and random
+            questions about the universe. I’m trying to build a life
+            I genuinely enjoy — preferably without a compulsory
+            Monday-to-Friday relationship with a desk. 😭
+          </p>
+
           <div class="actions">
-            <a class="btn primary" href="https://www.instagram.com/alwayz_sandeep/" target="_blank" rel="noopener noreferrer">Follow @alwayz_sandeep on Instagram ↗</a>
-            <a class="btn secondary" href="#about">Get to know me</a>
-         
-</div>
+            <a class="btn primary"
+               href="https://www.instagram.com/alwayz_sandeep/"
+               target="_blank"
+               rel="noopener noreferrer">
+              Follow @alwayz_sandeep ↗
+            </a>
+
+            <a class="btn secondary" href="about.html">
+              Get to know me →
+            </a>
+          </div>
         </div>
+
         <div class="portrait">
-          <img
-            src="sandeep-manchodu.jpeg"
-            alt="Sandeep Manchodu"
-            style="width:100%; height:100%; object-fit:cover; border-radius:inherit;"
-          />
+          <img src="sandeep-manchodu.jpeg"
+               alt="Sandeep Manchodu"
+               width="600"
+               height="700">
         </div>
       </div>
 
-
       <section id="about">
         <div class="eyebrow">A little about me</div>
-        <h2>More than a name.</h2>
-        <p class="about">I'm Sandeep Manchodu. I'm learning, creating and figuring things out one step at a time. I enjoy technology, personal growth, meaningful moments and sharing a positive vibe. “Manchodu” is the personal identity I want people to associate with confidence, kindness, respect and being genuine.</p>
+        <h2>Still figuring it out. That's the fun part.</h2>
+
+        <p class="about">
+          I'm Sandeep Manchodu. A B.Tech guy navigating college,
+          life and the occasional existential crisis that arrives
+          without an appointment. I enjoy learning, discovering
+          new things and finding reasons to laugh along the way.
+          I don't have everything figured out — but pretending I do
+          sounds exhausting. 😂
+        </p>
       </section>
 
       <section id="interests">
-        <div class="eyebrow">What you'll find here</div>
+        <div class="eyebrow">Things that keep me entertained</div>
         <h2>My world, in a few words.</h2>
+
         <div class="grid">
-          <div class="tile"><b>Everyday moments</b><p>Photos, memories and little things worth smiling about.</p></div>
-          <div class="tile"><b>Learning & creating</b><p>My journey with technology, ideas and creative projects.</p></div>
-          <div class="tile"><b>Good energy</b><p>Confidence, kindness, humour and staying true to myself.</p></div>
+          <div class="tile">
+            <b>🎮 Gaming mode</b>
+            <p>
+              Just one more match. Famous last words.
+              Sometimes I win; sometimes the game teaches me patience
+              in the most disrespectful way possible.
+            </p>
+          </div>
+
+          <div class="tile">
+            <b>🌌 Curious about everything</b>
+            <p>
+              Space, nature and animals fascinate me.
+              The universe is unbelievably huge, animals are wonderfully
+              weird, and somehow I still have more questions than answers.
+            </p>
+          </div>
+
+          <div class="tile">
+            <b>🎧 Songs on repeat</b>
+            <p>
+              A good song can fix the mood, improve the walk and
+              turn a completely ordinary moment into a movie scene.
+              My playlist deserves partial credit for my happiness.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="eyebrow">The B.Tech chronicles</div>
+        <h2>Degree loading. Life loading. 😂</h2>
+
+        <p class="about">
+          B.Tech is a mix of deadlines, exams, unexpected lessons
+          and wondering how the semester passed so quickly.
+          Somewhere between assignments and figuring things out,
+          I realised college is about more than marks — it's also
+          about memories, friendships, mistakes and learning to
+          handle life one plot twist at a time.
+        </p>
+
+        <p class="about">
+          Still learning. Still growing. And occasionally checking
+          how many days are left until the next holiday.
+        </p>
+      </section>
+
+      <section id="dreams">
+        <div class="eyebrow">The bigger picture</div>
+        <h2>Freedom is the real flex.</h2>
+
+        <p class="about">
+          My dream? To become financially free enough that buying
+          something I like doesn't require a calculator, three budget
+          revisions and a meeting with my inner finance minister.
+        </p>
+
+        <p class="about">
+          I don't dream of avoiding hard work. I dream of having
+          more control over it — building something meaningful,
+          exploring opportunities and having the freedom to enjoy
+          the life I'm working for.
+        </p>
+
+        <p class="about">
+          And the classic 9–5 routine? I'd rather create my own path
+          if I can. Big dream, yes. Impossible? Let's see. 😎
+        </p>
+
+        <div class="grid">
+          <div class="tile">
+            <b>💸 Financial freedom</b>
+            <p>
+              One day, buy something I want without conducting
+              a full investigation into my bank balance.
+            </p>
+          </div>
+
+          <div class="tile">
+            <b>🧠 Never stop learning</b>
+            <p>
+              Keep discovering new ideas, understanding the world
+              and getting better at things that matter to me.
+            </p>
+          </div>
+
+          <div class="tile">
+            <b>🌍 A life of my own</b>
+            <p>
+              Make room for meaningful work, good people,
+              new experiences and a little adventure.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="eyebrow">My kind of cinema</div>
+        <h2>Make it feel like a movie.</h2>
+
+        <p class="about">
+          Feel-good movies, adventures, historical films and
+          larger-than-life characters — that's my kind of watchlist.
+          Give me a story that inspires me, takes me somewhere new,
+          or makes me forget to check my phone for two hours.
+        </p>
+
+        <div>
+          <span class="tag">Feel-good films</span>
+          <span class="tag">Adventure</span>
+          <span class="tag">History</span>
+          <span class="tag">Epic characters</span>
+        </div>
+      </section>
+
+      <section>
+        <div class="eyebrow">A small disclaimer</div>
+        <h2>Things I refuse to overthink.</h2>
+
+        <div class="grid">
+          <div class="tile">
+            <b>💀 Hairfall drama?</b>
+            <p>
+              Not every strand needs a farewell ceremony.
+              I'll take reasonable care of myself, stay sensible
+              and refuse to let a few hairs write my autobiography.
+            </p>
+          </div>
+
+          <div class="tile">
+            <b>📱 Opened my phone for what?</b>
+            <p>
+              Walked into an app with a mission.
+              Forgot the mission.
+              Left with three new facts about space.
+            </p>
+          </div>
+
+          <div class="tile">
+            <b>🤔 One question, 27 questions</b>
+            <p>
+              I like learning new things. Unfortunately,
+              every answer seems to unlock a bonus level
+              of questions.
+            </p>
+          </div>
         </div>
       </section>
 
       <section id="meaning">
         <div class="eyebrow">The meaning behind the name</div>
-        <h2>“Manchodu” — goodness and character.</h2>
-        <p class="about">In Telugu, related expressions include <strong>మంచివాడు (manchivāḍu)</strong>, meaning “a good man,” and <strong>మంచి మనిషి (manchi manishi)</strong>, meaning “a good person.” The exact sense depends on context. For my personal brand, I use “Manchodu” to express kindness, honesty, respect and good character.</p>
-        <p class="language-list"><strong>Related ideas in other languages:</strong> English — good person, kind-hearted person, gentleman; Hindi — अच्छा इंसान (achchha insaan); Tamil — நல்ல மனிதர் (nalla manithar); Kannada — ಒಳ್ಳೆಯ ವ್ಯಕ್ತಿ (olleya vyakti); Malayalam — നല്ല മനുഷ്യൻ (nalla manushyan); Spanish — buena persona; French — personne bienveillante; German — guter Mensch; Japanese — いい人 (ii hito).</p>
+        <h2>Manchodu — a name with meaning.</h2>
+
+        <p class="about">
+          In Telugu, related expressions include
+          <strong>మంచివాడు (manchivāḍu)</strong>, meaning
+          “a good man,” and <strong>మంచి మనిషి (manchi manishi)</strong>,
+          meaning “a good person.” The exact sense depends on context.
+          For my personal brand, Manchodu represents kindness,
+          honesty, respect and good character.
+        </p>
       </section>
 
       <section>
-        <div class="quote">“Being a manchodu isn't about showing off. It's about confidence, character and treating people well.”</div>
+        <div class="quote">
+          “Big dreams, good music, a curious mind —
+          and enough humour to survive the plot twists.”
+        </div>
       </section>
 
       <section id="connect">
         <div class="eyebrow">Let's connect</div>
         <h2>Say hello.</h2>
-        <p class="about">Follow me on Instagram for updates, photos and everyday moments.</p>
+
+        <p class="about">
+          If you enjoy a little humour, curious conversations
+          and everyday moments, come say hi on Instagram.
+        </p>
+
         <div class="actions">
-          <a class="btn primary" href="https://www.instagram.com/alwayz_sandeep/" target="_blank" rel="noopener noreferrer">📸 @alwayz_sandeep ↗</a>
+          <a class="btn primary"
+             href="https://www.instagram.com/alwayz_sandeep/"
+             target="_blank"
+             rel="noopener noreferrer">
+            📸 @alwayz_sandeep ↗
+          </a>
+
+          <a class="btn secondary" href="about.html">
+            More about me →
+          </a>
         </div>
       </section>
     </main>
 
-    <footer><span>© <span id="year">2026</span> Sandeep Manchodu</span><span>Personal website · Made to be real, not perfect.</span></footer>
+    <footer>
+      <span>© <span id="year">2026</span> Sandeep Manchodu</span>
+      <span>Personal website · Made to be real, not perfect.</span>
+    </footer>
   </div>
 </body>
 </html>
