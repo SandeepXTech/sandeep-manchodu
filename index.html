@@ -257,6 +257,95 @@
       html { scroll-behavior: auto; }
       .btn { transition: none; }
     }
+    
+/* FUNNY REVIEW EXIT POPUP */
+.review-exit-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(20, 29, 24, 0.78);
+  backdrop-filter: blur(7px);
+}
+
+.review-exit-overlay.show {
+  display: flex;
+  animation: exitFadeIn 0.25s ease;
+}
+
+.review-exit-box {
+  width: 100%;
+  max-width: 420px;
+  padding: 30px 24px;
+  text-align: center;
+  background: #f5eddf;
+  color: #26382e;
+  border: 3px solid #c69a52;
+  border-radius: 22px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  animation: exitStamp 0.45s cubic-bezier(.2,1.5,.5,1);
+}
+
+.exit-emoji {
+  font-size: 55px;
+  animation: exitShake 0.5s ease 0.3s;
+}
+
+.review-exit-box h2 {
+  color: #b43c32;
+  font-family: inherit;
+  font-size: 25px;
+  margin: 12px 0;
+}
+
+.review-exit-box p {
+  line-height: 1.6;
+  margin: 12px 0;
+}
+
+.review-exit-box button {
+  display: block;
+  width: 100%;
+  padding: 13px;
+  margin-top: 13px;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#exit-review-btn {
+  background: #496b53;
+  color: white;
+}
+
+#exit-leave-btn {
+  background: #e7dccb;
+  color: #38352e;
+}
+
+@keyframes exitFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes exitStamp {
+  0% { transform: scale(0.55) rotate(-8deg); }
+  75% { transform: scale(1.06) rotate(2deg); }
+  100% { transform: scale(1) rotate(0); }
+}
+
+@keyframes exitShake {
+  0%, 100% { transform: rotate(0); }
+  25% { transform: rotate(-12deg); }
+  50% { transform: rotate(12deg); }
+  75% { transform: rotate(-7deg); }
+}
+
   </style>
 
   <!-- SEO Structured Data -->
@@ -292,7 +381,7 @@
             "Sandeep",
             "Manchodu"
           ],
-          "description": "A B.Tech student interested in gaming, music, space, nature, animals and learning new things.",
+          "description": "A B.Tech student interested in gaming eg.subway surface,temple run,candy CRUSH, music, space, nature, animals and learning new things.",
           "url": "https://sandeepxtech.github.io/sandeep-manchodu/",
           "sameAs": [
             "https://www.instagram.com/alwayz_sandeep/",
@@ -330,10 +419,9 @@
           <h1>Hello, I'm<br><span>Sandeep Manchodu.</span></h1>
 
           <p class="lead">
-            B.Tech life, gaming nights, songs on repeat and random
-            questions about the universe. I’m trying to build a life
-            I genuinely enjoy — preferably without a compulsory
-            Monday-to-Friday relationship with a desk. 😭
+            A B.Tech student with interests that go well beyond textbooks. 
+            Into gaming, good music, thoughtful conversations, and the occasional rabbit hole about the universe.
+            I enjoy learning, exploring new things, and making the most of life. Still figuring things out, but at least I'm enjoying the process.
           </p>
 
           <div class="actions">
@@ -367,7 +455,7 @@
           life and the occasional existential crisis that arrives
           without an appointment. I enjoy learning, discovering
           new things and finding reasons to laugh along the way.
-          I don't have everything figured out — but pretending I do
+          I don't have everything figured out  but pretending I do
           sounds exhausting. 😂
         </p>
       </section>
@@ -383,24 +471,28 @@
               Just one more match. Famous last words.
               Sometimes I win; sometimes the game teaches me patience
               in the most disrespectful way possible.
+              mana games anni subway surface,candy crush,carroms,temple run.elanti well 
+              educated games matrame.
+              phone ads lo vachey prathi game maximum install chestha atleast once adhi na balahenatha.
             </p>
           </div>
 
           <div class="tile">
             <b>🌌 Curious about everything</b>
             <p>
-              Space, nature and animals fascinate me.
-              The universe is unbelievably huge, animals are wonderfully
-              weird, and somehow I still have more questions than answers.
+              Space makes me question how tiny we are, nature makes me appreciate how beautiful this planet is,
+              and animals make me wonder what goes on inside their little heads. Basically, 
+              I'm fascinated by everything and 
+              fully prepared to spend hours watching random videos about it.
             </p>
           </div>
 
           <div class="tile">
             <b>🎧 Songs on repeat</b>
             <p>
-              A good song can fix the mood, improve the walk and
-              turn a completely ordinary moment into a movie scene.
-              My playlist deserves partial credit for my happiness.
+              A good song can fix my mood, upgrade my walk and turn an ordinary moment into a full-on movie scene.
+              Mana songs selection maatram next level  playlist lo skip cheyyadaniki songs dorakadam kastam. 
+              Basically, my playlist deserves its own fan following. 😭🎶
             </p>
           </div>
         </div>
@@ -411,12 +503,12 @@
         <h2>Degree loading. Life loading. 😂</h2>
 
         <p class="about">
-          B.Tech is a mix of deadlines, exams, unexpected lessons
-          and wondering how the semester passed so quickly.
-          Somewhere between assignments and figuring things out,
-          I realised college is about more than marks — it's also
-          about memories, friendships, mistakes and learning to
-          handle life one plot twist at a time.
+         B.Tech ante assignments, exams, deadlines and semester ela ayipoyindho kuda teliyani oka separate adventure.
+          Madhyalo konni unexpected lessons, konni unforgettable memories, crazy friendships and konni questionable decisions. 
+          Marks kosam college ki vacham, but life lessons and stories tho graduate avuthunnam.
+          Asalu syllabus lo lenivi nerchukovadame biggest achievement emo! 😭
+          # never achieved 75% attendence
+          college ki vastham kani class lo undam
         </p>
 
         <p class="about">
@@ -430,14 +522,18 @@
         <h2>Freedom is the real flex.</h2>
 
         <p class="about">
-          My dream? To become financially free enough that buying
-          something I like doesn't require a calculator, three budget
-          revisions and a meeting with my inner finance minister.
+         Financial freedom is the goal, but vrutti dharmam is non-negotiable. 
+          I want to earn well, live comfortably and buy things without conducting a full budget meeting in my head. 
+          But success should come with honesty, ethics and a clear conscience.
+          Rich ga undali, values kuda maintain cheyyali! 😂
+          PROFFESSIONAL ETHICS (ప్రవృత్తి ధర్మం)
+          
+
         </p>
 
         <p class="about">
           I don't dream of avoiding hard work. I dream of having
-          more control over it — building something meaningful,
+          more control over it  building something meaningful,
           exploring opportunities and having the freedom to enjoy
           the life I'm working for.
         </p>
@@ -451,16 +547,19 @@
           <div class="tile">
             <b>💸 Financial freedom</b>
             <p>
-              One day, buy something I want without conducting
-              a full investigation into my bank balance.
+              To reach a point where I can enjoy the things I love without overthinking every little expense. 😭
             </p>
           </div>
 
           <div class="tile">
             <b>🧠 Never stop learning</b>
             <p>
-              Keep discovering new ideas, understanding the world
-              and getting better at things that matter to me.
+              kotha vishayalu  nerchukovali, prapanchani ni understand cheskovali, 
+              and skills improve cheskovali ani chala interest. Learning speed konchem slow emo, but consistency undhi🔥😌.
+              Naku ardham avvadaniki time paduthundhi, but once ardham ayithe easy ga marchiponu.
+
+cringe a unte review lo chepu change chedham ✌️😉
+
             </p>
           </div>
 
@@ -480,7 +579,7 @@
 
         <p class="about">
           Feel-good movies, adventures, historical films and
-          larger-than-life characters — that's my kind of watchlist.
+          larger-than-life characters  that's my kind of watchlist.
           Give me a story that inspires me, takes me somewhere new,
           or makes me forget to check my phone for two hours.
         </p>
@@ -499,7 +598,7 @@
 
         <div class="grid">
           <div class="tile">
-            <b>💀 Hairfall drama?</b>
+            <b>💀 Hairfall </b>
             <p>
               Not every strand needs a farewell ceremony.
               I'll take reasonable care of myself, stay sensible
@@ -508,20 +607,17 @@
           </div>
 
           <div class="tile">
-            <b>📱 Opened my phone for what?</b>
+            <b>PHONE</b>
             <p>
-              Walked into an app with a mission.
-              Forgot the mission.
-              Left with three new facts about space.
+             PHONE KI ADDICT AVVAKANDI BRO
             </p>
           </div>
 
           <div class="tile">
-            <b>🤔 One question, 27 questions</b>
+            <b>Curious Mind, Confused Brain</b>
             <p>
-              I like learning new things. Unfortunately,
-              every answer seems to unlock a bonus level
-              of questions.
+              But nenu questions aduguthunna ani, chaduvuthanu ani matram anukokandi guys.
+              Cheppaga… I'm a slow learner! Adhi kuda chaduvu mukka naaku asalu ekkadu. 😌✌️
             </p>
           </div>
         </div>
@@ -543,8 +639,8 @@
 
       <section>
         <div class="quote">
-          “Big dreams, good music, a curious mind —
-          and enough humour to survive the plot twists.”
+          “Somewhere between big dreams, silly thoughts, 
+          good music and trying to figure life out”
         </div>
       </section>
 
@@ -577,5 +673,290 @@
       <span>Personal website · Made to be real, not perfect.</span>
     </footer>
   </div>
+  
+<!-- DRAMATIC STAMP INTRO -->
+<section id="stamp-intro">
+  <div class="stamp-scene">
+    <div class="stamp-mark stamp-first">
+      ⚖️ WHY THIS WEBSITE EXISTS?
+    </div>
+
+    <div class="stamp-mark stamp-second">
+      CASE OPEN
+    </div>
+
+    <p class="stamp-message">
+      Well, that's a story for another scroll.
+      For now, explore a little, judge a little,
+      and don't forget to leave a review. 😜✌️
+    </p>
+  </div>
+</section>
+
+  <!-- VISITOR REVIEWS -->
+<section id="visitor-reviews">
+  <h2>What Do You Think of My Website? ⭐</h2>
+  <p>I'd love to hear from you! Leave a rating and a little message.</p>
+
+  <form id="review-form">
+    <label for="review-name">Your name</label>
+    <input
+      type="text"
+      id="review-name"
+      maxlength="50"
+      placeholder="Enter your name"
+      required
+    >
+
+    <label for="review-rating">Your rating</label>
+    <select id="review-rating" required>
+      <option value="">Choose your rating</option>
+      <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+      <option value="4">⭐⭐⭐⭐ Very good</option>
+      <option value="3">⭐⭐⭐ Good</option>
+      <option value="2">⭐⭐ Not bad</option>
+      <option value="1">⭐ Needs improvement</option>
+    </select>
+
+    <label for="review-message">Your review</label>
+    <textarea
+      id="review-message"
+      maxlength="1000"
+      placeholder="Write something about my website..."
+      required
+    ></textarea>
+
+    <button type="submit">Submit Review ⭐</button>
+    <p id="review-status" aria-live="polite"></p>
+  </form>
+
+  <h3>Visitor Reviews</h3>
+  <p id="review-count">Loading reviews...</p>
+  <div id="review-list"></div>
+</section>
+
+<!-- FUNNY REVIEW EXIT REMINDER -->
+<div id="review-exit-popup" class="review-exit-overlay" aria-hidden="true">
+  <div class="review-exit-box" role="dialog"
+       aria-modal="true" aria-labelledby="exit-title">
+
+    <div class="exit-emoji">😤</div>
+
+    <h2 id="exit-title"> WAIIIIIIIIT!</h2>
+
+    <p>
+      Review ivvakunda vellipothunnava? 😭
+    </p>
+
+    <p><strong>At least oka star aina esi po!!!!</strong></p>
+
+    <p>
+      Website nachakapothe honest ga cheppu…
+      improve chesukunta. 😌✌️
+    </p>
+
+    <button type="button" id="exit-review-btn">
+      Okay, I'll review! ⭐
+    </button>
+
+    <button type="button" id="exit-leave-btn">
+      nen chepanu 
+    </button>
+  </div>
+</div>
+  
+<!-- SUPABASE REVIEW CONNECTION -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+  const SUPABASE_URL = "https://fwlhvsuvgqivcmjsombg.supabase.co";
+  const SUPABASE_KEY = "sb_publishable_Sy-OZVUVznMa-CjMeR_C2A_GZR2Uar4";
+
+  const supabaseClient = window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_KEY
+  );
+
+  const reviewForm = document.getElementById("review-form");
+  const reviewList = document.getElementById("review-list");
+  const reviewCount = document.getElementById("review-count");
+  const reviewStatus = document.getElementById("review-status");
+
+  async function loadReviews() {
+    reviewList.replaceChildren();
+    reviewCount.textContent = "Loading reviews...";
+
+    const { data, error } = await supabaseClient
+      .from("reviews")
+      .select("id, name, rating, message, created_at")
+      .order("created_at", { ascending: false })
+      .limit(100);
+
+    if (error) {
+      reviewCount.textContent = "Could not load reviews. Please try again later.";
+      console.error(error);
+      return;
+    }
+
+    reviewCount.textContent =
+      data.length + (data.length === 1 ? " review" : " reviews");
+
+    if (data.length === 0) {
+      reviewList.textContent = "Be the first to leave a review! ⭐";
+      return;
+    }
+
+    data.forEach((review) => {
+      const card = document.createElement("article");
+      card.className = "review-card";
+
+      const name = document.createElement("strong");
+      name.textContent = review.name;
+
+      const stars = document.createElement("p");
+      stars.textContent = "⭐".repeat(review.rating);
+
+      const message = document.createElement("p");
+      message.textContent = review.message;
+
+      const date = document.createElement("small");
+      date.textContent = new Date(review.created_at).toLocaleDateString();
+
+      card.append(name, stars, message, date);
+      reviewList.appendChild(card);
+    });
+  }
+
+  reviewForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const name = document.getElementById("review-name").value.trim();
+    const rating = Number(document.getElementById("review-rating").value);
+    const message = document.getElementById("review-message").value.trim();
+
+    if (!name || !message || rating < 1 || rating > 5) {
+      reviewStatus.textContent = "Please complete all fields correctly.";
+      return;
+    }
+
+    const submitButton = reviewForm.querySelector('button[type="submit"]');
+    submitButton.disabled = true;
+    reviewStatus.textContent = "Submitting your review...";
+
+    const { error } = await supabaseClient
+      .from("reviews")
+      .insert([{ name, rating, message }]);
+
+    submitButton.disabled = false;
+
+    if (error) {
+      reviewStatus.textContent = "Sorry, your review could not be submitted. Please try again.";
+      console.error(error);
+      return;
+    }
+
+    reviewForm.reset();
+    reviewStatus.textContent = "Thank you! Your review is now published. ❤️";
+
+    await loadReviews();
+  });
+
+  loadReviews();
+</script>
+  
+<!-- REVIEW EXIT REMINDER BEHAVIOUR -->
+<script>
+(() => {
+  const reviewSection = document.getElementById("visitor-reviews");
+  const popup = document.getElementById("review-exit-popup");
+  const reviewButton = document.getElementById("exit-review-btn");
+  const leaveButton = document.getElementById("exit-leave-btn");
+  const reviewStatus = document.getElementById("review-status");
+
+  if (!reviewSection || !popup || !reviewButton || !leaveButton) return;
+
+  let hasReachedReviews = false;
+  let hasSubmittedReview = false;
+  let reminderShown = false;
+  let historyEntryAdded = false;
+
+  function closePopup() {
+    popup.classList.remove("show");
+    popup.setAttribute("aria-hidden", "true");
+  }
+
+  function showPopup() {
+    if (reminderShown || hasSubmittedReview) return;
+
+    reminderShown = true;
+    popup.classList.add("show");
+    popup.setAttribute("aria-hidden", "false");
+  }
+
+  // Detect when the visitor reaches the review section.
+  const observer = new IntersectionObserver((entries) => {
+    if (entries.some(entry => entry.isIntersecting)) {
+      hasReachedReviews = true;
+
+      if (!historyEntryAdded) {
+        history.pushState({ reviewReminder: true }, "", location.href);
+        historyEntryAdded = true;
+      }
+
+      observer.disconnect();
+    }
+  }, { threshold: 0.1 });
+
+  observer.observe(reviewSection);
+
+  // Detect a successfully submitted review.
+  if (reviewStatus) {
+    const statusObserver = new MutationObserver(() => {
+      if (reviewStatus.textContent.includes("Your review is now published")) {
+        hasSubmittedReview = true;
+        closePopup();
+      }
+    });
+
+    statusObserver.observe(reviewStatus, {
+      childList: true,
+      characterData: true,
+      subtree: true
+    });
+  }
+
+  // First Back press after reaching reviews shows the reminder.
+  window.addEventListener("popstate", () => {
+    historyEntryAdded = false;
+
+    if (hasReachedReviews && !hasSubmittedReview && !reminderShown) {
+      showPopup();
+    }
+  });
+
+  // Take the visitor back to the review form.
+  reviewButton.addEventListener("click", () => {
+    closePopup();
+
+    history.pushState({ reviewReminder: true }, "", location.href);
+    historyEntryAdded = true;
+
+    reviewSection.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+
+    document.getElementById("review-name")?.focus({
+      preventScroll: true
+    });
+  });
+
+  // Respect their choice to leave.
+  leaveButton.addEventListener("click", () => {
+    closePopup();
+    window.history.back();
+  });
+})();
+</script>
 </body>
 </html>
