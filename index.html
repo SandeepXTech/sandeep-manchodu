@@ -462,8 +462,9 @@
 
  .stamp-scene.stamp-shake { animation: none; }
 }
+
 /* =================================
-   ELECTRIC BLUE BMW CINEMATIC DRIFT
+   RESPONSIVE BMW CURVED DRIFT
 ================================= */
 
 #interests {
@@ -472,7 +473,6 @@
   isolation: isolate;
 }
 
-/* Keep the heading and story cards in front */
 #interests > .eyebrow,
 #interests > h2,
 #interests > .grid {
@@ -480,13 +480,12 @@
   z-index: 2;
 }
 
-/* Drift animation layer */
 #drift-scene {
   position: absolute;
   top: 35%;
   left: 0;
   width: 100%;
-  height: 280px;
+  height: 300px;
   overflow: hidden;
   pointer-events: none;
   z-index: 1;
@@ -496,17 +495,31 @@
 
 #drift-scene.drift-active {
   visibility: visible;
-  animation: driftSceneFade 8s ease forwards;
+  animation: driftFade 8s ease forwards;
 }
 
-/* BMW image */
+.drift-track {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.track-line {
+  opacity: 0;
+}
+
+
 .drift-car {
   position: absolute;
-  left: -80%;
-  top: 35px;
-  width: clamp(340px, 75vw, 760px);
-  z-index: 2;
+  left: 0;
+  top: 0;
+  width: clamp(150px, 25vw, 260px);
+  offset-path: path("M 40 235 C 220 235 220 55 430 85 S 700 270 960 65");
+  offset-distance: 0%;
+  offset-rotate: auto;
   transform-origin: center;
+  z-index: 3;
 }
 
 .drift-car img {
@@ -516,129 +529,35 @@
   object-fit: contain;
 }
 
-/* Dramatic sideways drift */
 #drift-scene.drift-active .drift-car {
-  animation: bmwHeroDrift 6s cubic-bezier(.2,.7,.3,1) forwards;
+  animation: bmwPathDrift 6s cubic-bezier(.2,.7,.3,1) forwards;
 }
 
-@keyframes bmwHeroDrift {
+@keyframes bmwPathDrift {
   0% {
-    left: -80%;
-    transform: rotate(-5deg) scale(.85);
+    offset-distance: 0%;
+    transform: rotate(-5deg);
   }
-
-  20% {
-    left: 5%;
-    transform: rotate(7deg) scale(1);
+  35% {
+    offset-distance: 40%;
+    transform: rotate(8deg);
   }
-
-  42% {
-    left: 25%;
-    transform: rotate(-9deg) scale(1.08);
+  65% {
+    offset-distance: 70%;
+    transform: rotate(-7deg);
   }
-
-  58% {
-    left: 40%;
-    transform: rotate(5deg) scale(1.04);
-  }
-
-  78% {
-    left: 75%;
-    transform: rotate(-3deg) scale(.95);
-  }
-
   100% {
-    left: 120%;
-    transform: rotate(0deg) scale(.9);
+    offset-distance: 100%;
+    transform: rotate(0deg);
   }
 }
 
-/* Golden beach dust */
-.drift-smoke {
-  position: absolute;
-  left: -20%;
-  bottom: 15px;
-  width: 220px;
-  height: 150px;
-  opacity: 0;
-  border-radius: 50%;
-  background:
-    radial-gradient(
-      ellipse,
-      rgba(190,155,105,.48),
-      transparent 70%
-    );
-  filter: blur(15px);
-  z-index: 1;
-}
-
-#drift-scene.drift-active .drift-smoke {
-  animation: beachDust 6s ease forwards;
-}
-
-@keyframes beachDust {
-  0% {
-    left: -20%;
-    opacity: 0;
-    transform: scale(.5);
-  }
-
-  30% {
-    opacity: 1;
-    transform: scale(1.5);
-  }
-
-  100% {
-    left: 100%;
-    opacity: 0;
-    transform: scale(2.5);
-  }
-}
-
-/* Fade out after 8 seconds */
-@keyframes driftSceneFade {
-  0%, 78% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-/* Mobile adjustments */
 @media (max-width: 600px) {
-  #drift-scene {
-    top: 40%;
-    height: 190px;
-  }
-
   .drift-car {
-    width: 440px;
-    top: 30px;
+    width: 125px;
   }
 }
 
-/* Respect reduced-motion preferences */
-@media (prefers-reduced-motion: reduce) {
-  #drift-scene.drift-active,
-  #drift-scene.drift-active .drift-car,
-  #drift-scene.drift-active .drift-smoke {
-    animation: none;
-  }
-
-  #drift-scene.drift-active {
-    visibility: visible;
-    opacity: 1;
-  }
-
-  .drift-car {
-    left: 10%;
-  }
-}
-
-  </style>
 
   <!-- SEO Structured Data -->
   <script type="application/ld+json">
@@ -788,13 +707,24 @@
             </p>
           </div>
         </div>
-                <!-- JDM DRIFT ANIMATION -->
-        <div id="drift-scene" aria-hidden="true">
-          <div class="drift-smoke"></div>
-         <div class="drift-car">
-  <img src="bmw-drift.png" alt="Blue BMW drifting">
+            <!-- RESPONSIVE BMW DRIFT TRACK -->
+<div id="drift-scene" aria-hidden="true">
+
+  <svg class="drift-track" viewBox="0 0 1000 300" preserveAspectRatio="none">
+    <path class="track-line"
+      d="M 40,235 C 220,235 220,55 430,85 S 700,270 960,65"
+      fill="none"
+      stroke="#d8c5a6"
+      stroke-width="5"
+      stroke-dasharray="12 12"
+      stroke-linecap="round"/>
+  </svg>
+
+  <div class="drift-car">
+    <img src="bmw-drift.png" alt="">
+  </div>
+
 </div>
-        </div>
       </section>
       <section>
         <div class="eyebrow">The B.Tech chronicles</div>
