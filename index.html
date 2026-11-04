@@ -461,8 +461,135 @@
 
  .stamp-scene.stamp-shake { animation: none; }
 }
+/* =================================
+   JDM CAR DRIFT ANIMATION
+================================= */
 
+#interests {
+  position: relative;
+  overflow: hidden;
+}
 
+#drift-scene {
+  position: relative;
+  height: 130px;
+  width: 100%;
+  margin-top: 20px;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#drift-scene.drift-active {
+  visibility: visible;
+  opacity: 1;
+  animation: driftSceneFade 8s ease forwards;
+}
+
+.drift-car {
+  position: absolute;
+  left: -180px;
+  bottom: 12px;
+  font-size: 85px;
+  transform: rotate(-8deg) scaleX(-1);
+  z-index: 2;
+}
+
+#drift-scene.drift-active .drift-car {
+  animation: jdmDrift 3s cubic-bezier(.2,.8,.3,1) forwards;
+}
+
+.drift-smoke {
+  position: absolute;
+  left: 0;
+  bottom: 15px;
+  width: 160px;
+  height: 75px;
+  opacity: 0;
+  z-index: 1;
+}
+
+#drift-scene.drift-active .drift-smoke {
+  animation: tireSmoke 3.5s ease forwards;
+}
+
+.drift-smoke::before,
+.drift-smoke::after {
+  content: "";
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: rgba(150, 150, 150, .4);
+  filter: blur(12px);
+}
+
+.drift-smoke::after {
+  left: 55px;
+  top: -15px;
+  width: 80px;
+  height: 80px;
+}
+
+@keyframes jdmDrift {
+  0% {
+    left: -180px;
+    transform: rotate(-8deg) scaleX(-1);
+  }
+  45% {
+    left: 45%;
+    transform: rotate(12deg) scaleX(-1);
+  }
+  70% {
+    left: 55%;
+    transform: rotate(-5deg) scaleX(-1);
+  }
+  100% {
+    left: 110%;
+    transform: rotate(0deg) scaleX(-1);
+  }
+}
+
+@keyframes tireSmoke {
+  0% {
+    left: -100px;
+    opacity: 0;
+    transform: scale(.5);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    left: 55%;
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+@keyframes driftSceneFade {
+  0%, 75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #drift-scene.drift-active,
+  #drift-scene.drift-active .drift-car,
+  #drift-scene.drift-active .drift-smoke {
+    animation: none;
+  }
+
+  #drift-scene.drift-active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
   </style>
 
   <!-- SEO Structured Data -->
@@ -613,8 +740,12 @@
             </p>
           </div>
         </div>
+                <!-- JDM DRIFT ANIMATION -->
+        <div id="drift-scene" aria-hidden="true">
+          <div class="drift-smoke"></div>
+          <div class="drift-car">🏎️</div>
+        </div>
       </section>
-
       <section>
         <div class="eyebrow">The B.Tech chronicles</div>
         <h2>Degree loading. Life loading. 😂</h2>
@@ -1119,6 +1250,34 @@ if (stampIntro) {
   }, { threshold: 0.35 });
 
   stampObserver.observe(stampIntro);
+}
+</script>
+  <script>
+// =================================
+// JDM DRIFT SCROLL TRIGGER
+// =================================
+
+const driftScene = document.getElementById("drift-scene");
+const interestsSection = document.getElementById("interests");
+
+if (driftScene && interestsSection) {
+  let driftPlayed = false;
+
+  const driftObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && !driftPlayed) {
+        driftPlayed = true;
+
+        driftScene.classList.add("drift-active");
+
+        driftObserver.disconnect();
+      }
+    });
+  }, {
+    threshold: 0.25
+  });
+
+  driftObserver.observe(interestsSection);
 }
 </script>
 </body>
