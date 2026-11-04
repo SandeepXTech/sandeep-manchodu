@@ -557,7 +557,28 @@
     width: 125px;
   }
 }
+    @keyframes driftFade {
+  0%, 78% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 
+@media (prefers-reduced-motion: reduce) {
+  #drift-scene.drift-active,
+  #drift-scene.drift-active .drift-car {
+    animation: none;
+  }
+
+  #drift-scene.drift-active {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+</style>
 
   <!-- SEO Structured Data -->
   <script type="application/ld+json">
