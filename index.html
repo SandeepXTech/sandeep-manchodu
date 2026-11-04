@@ -463,122 +463,164 @@
  .stamp-scene.stamp-shake { animation: none; }
 }
 /* =================================
-   JDM CAR DRIFT ANIMATION
+   ELECTRIC BLUE BMW CINEMATIC DRIFT
 ================================= */
 
 #interests {
   position: relative;
   overflow: hidden;
+  isolation: isolate;
 }
 
-#drift-scene {
+/* Keep the heading and story cards in front */
+#interests > .eyebrow,
+#interests > h2,
+#interests > .grid {
   position: relative;
-  height: 130px;
+  z-index: 2;
+}
+
+/* Drift animation layer */
+#drift-scene {
+  position: absolute;
+  top: 35%;
+  left: 0;
   width: 100%;
-  margin-top: 20px;
+  height: 280px;
   overflow: hidden;
   pointer-events: none;
+  z-index: 1;
   opacity: 0;
   visibility: hidden;
 }
 
 #drift-scene.drift-active {
   visibility: visible;
-  opacity: 1;
   animation: driftSceneFade 8s ease forwards;
 }
 
+/* BMW image */
 .drift-car {
   position: absolute;
-  left: -180px;
-  bottom: 12px;
-  font-size: 85px;
-  transform: rotate(-8deg) scaleX(-1);
+  left: -80%;
+  top: 35px;
+  width: clamp(340px, 75vw, 760px);
   z-index: 2;
+  transform-origin: center;
 }
 
+.drift-car img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Dramatic sideways drift */
 #drift-scene.drift-active .drift-car {
-  animation: jdmDrift 3s cubic-bezier(.2,.8,.3,1) forwards;
+  animation: bmwHeroDrift 6s cubic-bezier(.2,.7,.3,1) forwards;
 }
 
+@keyframes bmwHeroDrift {
+  0% {
+    left: -80%;
+    transform: rotate(-5deg) scale(.85);
+  }
+
+  20% {
+    left: 5%;
+    transform: rotate(7deg) scale(1);
+  }
+
+  42% {
+    left: 25%;
+    transform: rotate(-9deg) scale(1.08);
+  }
+
+  58% {
+    left: 40%;
+    transform: rotate(5deg) scale(1.04);
+  }
+
+  78% {
+    left: 75%;
+    transform: rotate(-3deg) scale(.95);
+  }
+
+  100% {
+    left: 120%;
+    transform: rotate(0deg) scale(.9);
+  }
+}
+
+/* Golden beach dust */
 .drift-smoke {
   position: absolute;
-  left: 0;
+  left: -20%;
   bottom: 15px;
-  width: 160px;
-  height: 75px;
+  width: 220px;
+  height: 150px;
   opacity: 0;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      ellipse,
+      rgba(190,155,105,.48),
+      transparent 70%
+    );
+  filter: blur(15px);
   z-index: 1;
 }
 
 #drift-scene.drift-active .drift-smoke {
-  animation: tireSmoke 3.5s ease forwards;
+  animation: beachDust 6s ease forwards;
 }
 
-.drift-smoke::before,
-.drift-smoke::after {
-  content: "";
-  position: absolute;
-  width: 65px;
-  height: 65px;
-  border-radius: 50%;
-  background: rgba(150, 150, 150, .4);
-  filter: blur(12px);
-}
-
-.drift-smoke::after {
-  left: 55px;
-  top: -15px;
-  width: 80px;
-  height: 80px;
-}
-
-@keyframes jdmDrift {
+@keyframes beachDust {
   0% {
-    left: -180px;
-    transform: rotate(-8deg) scaleX(-1);
-  }
-  45% {
-    left: 45%;
-    transform: rotate(12deg) scaleX(-1);
-  }
-  70% {
-    left: 55%;
-    transform: rotate(-5deg) scaleX(-1);
-  }
-  100% {
-    left: 110%;
-    transform: rotate(0deg) scaleX(-1);
-  }
-}
-
-@keyframes tireSmoke {
-  0% {
-    left: -100px;
+    left: -20%;
     opacity: 0;
     transform: scale(.5);
   }
+
   30% {
     opacity: 1;
-    transform: scale(1.2);
+    transform: scale(1.5);
   }
+
   100% {
-    left: 55%;
+    left: 100%;
     opacity: 0;
-    transform: scale(2);
+    transform: scale(2.5);
   }
 }
 
+/* Fade out after 8 seconds */
 @keyframes driftSceneFade {
-  0%, 75% {
+  0%, 78% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
     visibility: hidden;
   }
 }
 
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  #drift-scene {
+    top: 40%;
+    height: 190px;
+  }
+
+  .drift-car {
+    width: 440px;
+    top: 30px;
+  }
+}
+
+/* Respect reduced-motion preferences */
 @media (prefers-reduced-motion: reduce) {
   #drift-scene.drift-active,
   #drift-scene.drift-active .drift-car,
@@ -587,10 +629,15 @@
   }
 
   #drift-scene.drift-active {
-    opacity: 1;
     visibility: visible;
+    opacity: 1;
+  }
+
+  .drift-car {
+    left: 10%;
   }
 }
+
   </style>
 
   <!-- SEO Structured Data -->
@@ -716,7 +763,7 @@
               Just one more match. Famous last words.
               Sometimes I win; sometimes the game teaches me patience
               in the most disrespectful way possible.
-              mana games anni subway surface,candy crush,carroms,temple run.elanti well 
+              mana games anni subway surf,candy crush,carroms,temple run.elanti well 
               educated games matrame.
               phone ads lo vachey prathi game maximum install chestha atleast once adhi na balahenatha.
             </p>
@@ -744,7 +791,9 @@
                 <!-- JDM DRIFT ANIMATION -->
         <div id="drift-scene" aria-hidden="true">
           <div class="drift-smoke"></div>
-          <div class="drift-car">🏎️</div>
+         <div class="drift-car">
+  <img src="bmw-drift.png" alt="Blue BMW drifting">
+</div>
         </div>
       </section>
       <section>
@@ -756,8 +805,7 @@
           Madhyalo konni unexpected lessons, konni unforgettable memories, crazy friendships and konni questionable decisions. 
           Marks kosam college ki vacham, but life lessons and stories tho graduate avuthunnam.
           Asalu syllabus lo lenivi nerchukovadame biggest achievement emo! 😭
-          # never achieved 75% attendence
-          college ki vastham kani class lo undam
+          #never achieved 75% attendence college ki vastham kani class lo undam
         </p>
 
         <p class="about">
